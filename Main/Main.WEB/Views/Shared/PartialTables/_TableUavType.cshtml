@@ -1,0 +1,32 @@
+﻿@model Main.BLL.DTO.UavTypeDTO
+
+<table class="table table-hover table-striped">
+    <thead class="thead-default">
+        <tr>
+            <th>#</th>
+            <th>Параметр</th>
+            <th>Значение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>@Html.LabelFor(x => x.Id)</td>
+            <td>
+                @Html.DisplayFor(x => x.Id)
+            </td>
+        </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>@Html.LabelFor(x => x.Name)</td>
+        <td>
+            @Html.DisplayFor(x => x.Name)
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+

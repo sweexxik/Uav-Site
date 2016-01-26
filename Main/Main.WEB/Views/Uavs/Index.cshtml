@@ -1,0 +1,89 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Беспилотные комплексы";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* UAVS --> INDEX*@
+
+<button style="cursor: default" type="button" class="btn btn-lg btn-block card-header" disabled=""><h3 style="color: black"> Беспилотные авиационные комплексы нашего производства:</h3></button><br />
+
+<div class="row">
+
+    <div class="card">
+
+        <h4 align="center" class="card-header">БАК Бусел М</h4>
+        <img class="card-img-top" src="~/Content/Pictures/busel!.jpg" alt="Card image cap" style="width: 100%; height: 100%">
+        <h5 class="card-title">Радиус применения - до 25 км.</h5>
+        <p class="card-text">Взлет "с руки". Время подготовки к вылету - 15 минут.</p>
+        <a href="@Url.Action("buselm", "uavs")" class="btn btn-secondary">Подробнее &raquo;</a>
+
+    </div>
+
+    <div class="card">
+        <h4 align="center" class="card-header">БАК Бусел М50</h4>
+        <p align="center"><img class="card-img-top" src="~/Content/Pictures/m50.jpg" alt="Card image cap" style="width: 80%; height: 100%"></p>
+        <h5 class="card-title">Радиус применения - до 50 км.</h5>
+        <p class="card-text">Взлет с катапульты. Время подготовки к вылету 30 минут.</p>
+        <a href="@Url.Action("buselm50", "uavs")" class="btn btn-secondary">Подробнее &raquo;</a>
+    </div>
+
+    <div class="card">
+        <h4 align="center" class="card-header">БАК Буревестник</h4>
+        <p align="center"><img class="card-img-top" src="~/Content/Pictures/burevestn.jpg" alt="Card image cap" style="width: 100%; height: 100%"></p>
+        <h5 class="card-title">Радиус применения - до 300 км.</h5>
+        <p class="card-text">Время в полете - до 8 часов.<br /> Требуемая длина взлетной полосы - 300 м.</p>
+        <a href="@Url.Action("bur", "uavs")" class="btn btn-secondary">Подробнее &raquo;</a>
+    </div>
+
+    <div class="card">
+        <h4 align="center" class="card-header">БАК ЭМ </h4>
+        <p align="center"><img class="card-img-top" src="~/Content/Pictures/bakem.jpg" alt="Card image cap" style="width: 100%; height: 100%"></p>
+        <h5 class="card-title">БЛА на базе дирижабля</h5>
+        <p class="card-text">Дальность применения - до 50 км. <br />Возможность полета на скоростях от 0 до 15 м/c. <br /> Требуемая длина взлетной полосы - 30м.</p>
+        <a href="@Url.Action("bakem", "uavs")" class="btn btn-secondary">Подробнее &raquo;</a>
+    </div>
+
+    <div class="card">
+        <h4 align="center" class="card-header">Пункты управления</h4>
+        <p align="center"><img class="card-img-top" src="~/Content/Pictures/gcu_mobile.jpg" alt="Card image cap" style="width: 100%; height: 100%"></p>
+        <h5 class="card-title">Наземные пункты управления</h5>
+        <p class="card-text">Изготавливаются в трех вариантах : переносной, мобильный и стационарный.</p>
+        <a href="@Url.Action("Index", "gcu")" class="btn btn-secondary">Подробнее &raquo;</a>
+    </div>
+
+    <div class="card">
+        <h4 align="center" class="card-header">Оптические системы</h4>
+        <p align="center"><img class="card-img-top" src="~/Content/Pictures/wood.jpg" alt="Card image cap" style="width: 100%; height: 100%"></p>
+        <h5 class="card-title">Целевая нагрузка БЛА</h5>
+        <p class="card-text">Малогабаритные управляемые стабилизированные видеосистемы</p>
+        <a href="@Url.Action("index", "payloads")" class="btn btn-secondary">Подробнее &raquo;</a>
+    </div>
+
+    @*<div class="card">
+        <h4 align="center" class="card-header">Системы связи</h4>
+        <p align="center"><img class="card-img-top" src="~/Content/Pictures/opu.jpg" alt="Card image cap" style="width: 90%; height: 100%"></p>
+        <h5 class="card-title">Цифровой канал связи</h5>
+        <p class="card-text">Обеспечивает устойчивую связь с БЛА и передачу видеоинформации в реальном времени</p>
+        <a href="@Url.Action("Index", "gcu")" class="btn btn-secondary">Подробнее &raquo;</a>
+    </div>
+    
+    <div class="card">
+        <h4 align="center" class="card-header">АПК Шлюз</h4>
+        <p align="center"><img class="card-img-top" src="~/Content/Pictures/wood.jpg" alt="Card image cap" style="width: 100%; height: 100%"></p>
+        <h5 class="card-title">Описание</h5>
+        <p class="card-text">Передача видеоинформации удаленным потребителям через интернет</p>
+        <a href="@Url.Action("Index", "optic")" class="btn btn-secondary">Подробнее &raquo;</a>
+    </div>
+
+    <div class="card">
+        <h4 align="center" class="card-header">Услуги</h4>
+        <p align="center"><img class="card-img-top" src="~/Content/Pictures/wood.jpg" alt="Card image cap" style="width: 100%; height: 100%"></p>
+        <h5 class="card-title">Услуги</h5>
+        <p class="card-text">Оказание Услуг</p>
+        <a href="@Url.Action("Index", "optic")" class="btn btn-secondary">Подробнее &raquo;</a>
+    </div>*@
+
+</div>
+

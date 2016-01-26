@@ -1,0 +1,13 @@
+D:\dev!\Main\Main\UAV.Domain\bin\Release\UAV.Domain.dll.config
+D:\dev!\Main\Main\UAV.Domain\bin\Release\UAV.Domain.dll
+D:\dev!\Main\Main\UAV.Domain\bin\Release\UAV.Domain.pdb
+D:\dev!\Main\Main\UAV.Domain\bin\Release\EntityFramework.dll
+D:\dev!\Main\Main\UAV.Domain\bin\Release\EntityFramework.SqlServer.dll
+D:\dev!\Main\Main\UAV.Domain\bin\Release\EntityFramework.xml
+D:\dev!\Main\Main\UAV.Domain\bin\Release\EntityFramework.SqlServer.xml
+D:\dev!\Main\Main\UAV.Domain\obj\Release\UAV.Domain.Migrations.InitialCreate.resources
+D:\dev!\Main\Main\UAV.Domain\obj\Release\UAV.Domain.Migrations.addedGcuTypes.resources
+D:\dev!\Main\Main\UAV.Domain\obj\Release\UAV.Domain.csproj.GenerateResource.Cache
+D:\dev!\Main\Main\UAV.Domain\obj\Release\UAV.Domain.dll
+D:\dev!\Main\Main\UAV.Domain\obj\Release\UAV.Domain.pdb
+D:\dev!\Main\Main\UAV.Domain\obj\Release\UAV.Domain.csprojResolveAssemblyReference.cache

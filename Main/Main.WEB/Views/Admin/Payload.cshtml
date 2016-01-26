@@ -1,0 +1,21 @@
+﻿@model Main.BLL.DTO.PayloadDTO
+
+@{
+    ViewBag.Title = "Payload";
+}
+
+<h2>@Model.Type</h2>
+
+@if (TempData["success"] != null)
+{
+    <div class="alert alert-success">@TempData["success"]</div>
+}
+
+@if (TempData["error"] != null)
+{
+    <div class="alert alert-danger">@TempData["error"]</div>
+}
+
+@Html.ActionLink("Back", "Index", "Admin")
+@Html.RouteLink("Edit", "admin", new { controller = "admin", action = "edit", type = "plds", _id = @Model.Id })
+@Html.Partial("PartialTables/_TablePayload", Model)

@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="container">
+
+
+    <div class="col-xs-12 col-sm-9" style="width: 88%">
+
+        <button style="cursor: default" type="button" class="btn btn-lg btn-block card-header" disabled="">
+            <h3 style="color: black"> Оптические системы нашего производства:</h3>
+        </button><br />
+
+
+        <div class="row">
+
+            <div class="card">
+
+                <h5 align="center" class="card-header">Телевизионная камера</h5>
+                <img class="card-img-top" src="~/Content/Pictures/tv_2.jpg" alt="Card image cap" style="width: 100%; height: 100%">
+                <h5 class="card-title">HD разрешение </h5>
+                <p class="card-text">Двухосноая стабилизация</p>
+                <a href="@Url.Action("tv", "payloads")" class="btn btn-primary">Подробнее &raquo;</a>
+
+            </div>
+
+            <div class="card">
+
+                <h5 align="center" class="card-header">Инфракрасная камера</h5>
+                <p align="center">
+                    <img class="card-img-top" src="~/Content/Pictures/ir_2.jpg" alt="Card image cap" style="width: 100%; height: 100%">
+                </p>
+                <h5 class="card-title">ХХХ сенсор</h5>
+                <p class="card-text">Двухосноая стабилизация</p>
+                <a href="@Url.Action("mobile", "gcu")" class="btn btn-primary">Подробнее &raquo;</a>
+
+            </div>
+
+            <div class="card" style="">
+
+                <h5 align="center" class="card-header">Фото камера</h5>
+                <p align="center">
+                    <img class="card-img-top" src="~/Content/Pictures/photo_1.png" alt="Card image cap" style="width: 100%; height: 100%">
+                </p>
+                <h5 class="card-title">Зеркальный фотоаппарат Sony NEX 5</h5>
+                <p class="card-text">
+                    Стабилизация 1 оси
+                </p>
+                <a href="@Url.Action("stationary", "gcu")" class="btn btn-primary">Подробнее &raquo;</a>
+
+            </div>
+
+            <div class="card" style="">
+
+                <h5 align="center" class="card-header">Мультиспектральная камера</h5>
+                <p align="center">
+                    <img class="card-img-top" src="~/Content/Pictures/multispect.png" alt="Card image cap" style="width: 100%; height: 100%">
+                </p>
+                <h5 class="card-title">Получение снимков ***</h5>
+                <p class="card-text">
+                    Описание
+                </p>
+                <a href="@Url.Action("stationary", "gcu")" class="btn btn-primary">Подробнее &raquo;</a>
+
+            </div>
+
+            <div class="card" style="">
+
+                <h5 align="center" class="card-header">Фронтальная камера</h5>
+                <p align="center">
+                    <img class="card-img-top" src="~/Content/Pictures/frontal.jpg" alt="Card image cap" style="width: 100%; height: 100%">
+                </p>
+                <h5 class="card-title">GoPro Hero 4</h5>
+                <p class="card-text">
+                    Подходит для выполнения тренировочных полетов
+                </p>
+                <a href="@Url.Action("stationary", "gcu")" class="btn btn-primary">Подробнее &raquo;</a>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>

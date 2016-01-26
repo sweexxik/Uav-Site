@@ -1,0 +1,28 @@
+﻿@model Main.WEB.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+}
+<h2>Войдите</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="input-group">
+            @foreach (var item in ViewData.ModelMetadata.Properties)
+            {
+                @Html.Label(item.PropertyName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.Editor(item.PropertyName, new { htmlAttributes = new { @class = "form-control", placeholder = @item.PropertyName } })
+                    @Html.ValidationMessage(item.PropertyName, "", new { @class = "text-danger" })
+                </div>
+            }
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Go!" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+}

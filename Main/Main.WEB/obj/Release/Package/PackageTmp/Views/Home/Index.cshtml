@@ -1,0 +1,196 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img style="width: 50%" class="first-slide" src="~/Content/Pictures/DSC01261.JPG" alt="First slide">
+                <div class="container">
+                    <div class="carousel-caption text-xs-left">
+                        <h1>БАК Бусел М</h1>
+                        <p>Описание описание описание описание описание описание</p>
+                        <p><a class="btn btn-lg btn-primary" href="@Url.Action("buselm","uavs")" role="button">Подробнее</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img style="width: 50%" class="second-slide" src="~/Content/Pictures/DSC01279.JPG" alt="Second slide">
+                <div class="container">
+                    <div class="carousel-caption text-xs-right">
+                        <h1>БАК Бусел М50</h1>
+                        <p>Описание описание описание описание описание описание</p>
+                        <p><a class="btn btn-lg btn-primary" href="@Url.Action("buselm50","uavs")" role="button">Подробнее</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="third-slide" src="~/Content/Pictures/DSC01302.JPG" alt="Third slide">
+                <div class="container">
+                    <div class="carousel-caption text-xs-right">
+                        <h1>БАК Буревестник</h1>
+                        <p>Описание описание описание описание описание описание </p>
+                        <p><a class="btn btn-lg btn-primary" href="@Url.Action("bur","uavs")" role="button">Подробнее</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Назад</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Далее</span>
+        </a>
+    </div>
+
+
+
+
+    <section class="jumbotron" style="margin-top: -5%">
+        <div class="container">
+            <p align="center"> <img src="~/Content/555.jpg" style="width: 40%; height: 40%; float: left" /></p>
+            <h1 class="jumbotron-heading" align="center">БАК и технологии</h1>
+            <p align="center" class="lead text-muted">Новейшие разработки беспилотных комплексов мирового уровня</p>
+            <p align="center" class="lead text-muted">Описание нашего суперклассного НПЦ</p>
+
+            <p align="center">
+
+            </p>
+            <p align="center">
+                <a href="@Url.Action("Index", "uavs")" class="btn btn-primary">Узнать больше &raquo;</a>
+
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- Средний бар -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette" style="padding-left: 50px">
+
+        <div class="col-md-1" style="float: left">
+            <p align="center"><a href="@Url.Action("BuselM","uavs")" class="btn btn-primary-outline btn-lg" style="margin: 20px;">Бусел М</a></p>
+            <p align="center"><a href="@Url.Action("BuselM50","uavs")" class="btn btn-primary-outline btn-lg" style="margin: 20px;">Бусел М50</a></p>
+
+        </div>
+
+        <div class="col-md-7" style="">
+            <h2 align="center" class="featurette-heading">Семейство БАК Бусел М <span class="text-muted"><br /> <br /> Радиус применения от 0 до 100км </span></h2><br /> <br />
+            <p align="center" class="lead">Описание Описание Описание Описание Описание </p>
+        </div>
+
+        <div class="col-md-4" style="float:right">
+            <img class="img-thumbnail" src="~/Content/Pictures/busel!.jpg" alt="Generic placeholder image" width="500" height="300">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette" style="padding-left: 10px">
+
+        <div class="col-md-7 col-md-push-4">
+            <table>
+                <tr>
+                    <td>
+                        <h2 align="center" class="featurette-heading">БЛА Буревестник<span class="text-muted"><br /> <br /> Радиус применения до 300 км </span></h2><br /> <br />
+                        <p align="center" class="lead">Описание Описание Описание Описание Описание </p>
+                    </td>
+                    <td>
+                        <div class="col-md-1" style="float: left;padding-left: 100px">
+                            <p align="center"><a href="@Url.Action("Bur","uavs")" class="btn btn-primary-outline btn-lg" style="margin: 20px;">Описание</a></p>
+                            <p align="center"> <button type="button" class="btn btn-primary-outline btn-lg" style="margin: 20px">Ссылка 2</button></p>
+                            <p align="center"> <button type="button" class="btn btn-primary-outline btn-lg" style="margin: 20px">Ссылка 3</button></p>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+
+            </table>
+        </div>
+
+
+        <div class="col-md-4 col-md-pull-7" style="padding-left: 2%">
+            <img class="img-thumbnail" src="~/Content/Pictures/burevestn.jpg" alt="Generic placeholder image" width="500" height="300">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette" style="padding-left: 50px">
+
+        <div class="col-md-1" style="float: left">
+            <p align="center"><a href="@Url.Action("bakem","uavs")" class="btn btn-primary-outline btn-lg" style="margin: 20px;">Описание</a></p>
+            <p align="center"> <button type="button" class="btn btn-primary-outline btn-lg" style="margin: 20px">Ссылка 2</button></p>
+            <p align="center"> <button type="button" class="btn btn-primary-outline btn-lg" style="margin: 20px">Ссылка 3</button></p>
+
+        </div>
+
+        <div class="col-md-7" style="">
+            <h2 align="center" class="featurette-heading">БАК Экологического мониторинга <span class="text-muted"><br /> <br /> Минимальная скорость - 0 м/с.  </span></h2><br /> <br />
+            <p align="center" class="lead">Описание Описание Описание Описание Описание </p>
+        </div>
+
+        <div class="col-md-4" style="float: right">
+            <img class="img-thumbnail" src="~/Content/Pictures/bakem.jpg" alt="Generic placeholder image" width="500" height="300">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Нижний бар -->
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 main" style="padding-bottom: 50px; margin-left: 9%">
+        <h1 class="page-header">Вас также может заинтересовать: </h1><br />
+
+        <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <p align="center"> <img src="~/Content/Pictures/gcu.jpg" width="200" height="200" class="img-circle" alt="Generic placeholder thumbnail"></p>
+                <h4 align="center">Пункты управления</h4>
+
+                <p align="center"><a href="@Url.Action("portable","gcu")" class="btn btn-primary-outline btn-lg" style="margin: 20px;">Переносной</a></p>
+                <p align="center"><a href="@Url.Action("mobile","gcu")" class="btn btn-primary-outline btn-lg" style="margin: 20px;">Мобильный</a></p>
+                <p align="center"><a href="@Url.Action("stationary","gcu")" class="btn btn-primary-outline btn-lg" style="margin: 20px;">Стационарный</a></p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <p align="center"><img src="~/Content/Pictures/IRfoto.jpg" width="200" height="200" class="img-circle" alt="Generic placeholder thumbnail"></p>
+                <h4 align="center">Оптические системы</h4>
+                <p align="center"><button type="button" class="btn btn-primary-outline btn-lg" style="margin: 1px;">ИК камера</button></p>
+                <p align="center"><button type="button" class="btn btn-primary-outline btn-lg" style="margin: 1px">ТВ камера</button></p>
+                <p align="center"><button type="button" class="btn btn-primary-outline btn-lg" style="margin: 1px">Фото камера</button></p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <p align="center">
+                    <img src="~/Content/Pictures/rescue-traning-20120725-12.jpg" width="200" height="200" class="img-circle" alt="Generic placeholder thumbnail">
+                </p>
+                <h4 align="center">Услуги</h4>
+                <p align="center"><button type="button" class="btn btn-primary-outline btn-lg" style="margin: 1px;">Аэрофотосъемка</button></p>
+                <p align="center"><button type="button" class="btn btn-primary-outline btn-lg" style="margin: 1px">Услуга 1</button></p>
+                <p align="center"><button type="button" class="btn btn-primary-outline btn-lg" style="margin: 1px">Услуга 2</button></p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <p align="center"><img src="~/Content/Pictures/bakem.jpg" width="200" height="200" class="img-circle" alt="Generic placeholder thumbnail"></p>
+                <h4 align="center">Услуги</h4>
+                <p align="center"><button type="button" class="btn btn-primary-outline btn-lg" style="margin: 1px;">Аэрофотосъемка</button></p>
+                <p align="center"><button type="button" class="btn btn-primary-outline btn-lg" style="margin: 1px">Услуга 1</button></p>
+                <p align="center"><button type="button" class="btn btn-primary-outline btn-lg" style="margin: 1px">Услуга 2</button></p>
+            </div>
+        </div>
+    </div>

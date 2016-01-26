@@ -1,0 +1,213 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -1%">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img style="width: 50%" class="first-slide" src="~/Content/Pictures/DSC01261.JPG" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption text-xs-left">
+                    <h1>БАК Бусел М</h1>
+                    <p>Описание описание описание описание описание описание</p>
+                    <p>
+                        <a class="btn btn-lg btn-secondary" href="@Url.Action("buselm", "uavs")" role="button">Подробнее</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img style="width: 50%" class="second-slide" src="~/Content/Pictures/DSC01279.JPG" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption text-xs-right">
+                    <h1>БАК Бусел М50</h1>
+                    <p>Описание описание описание описание описание описание</p>
+                    <p>
+                        <a class="btn btn-lg btn-secondary" href="@Url.Action("buselm50", "uavs")" role="button">Подробнее</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-item">
+            <img class="third-slide" src="~/Content/Pictures/DSC01302.JPG" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption text-xs-right">
+                    <h1>БАК Буревестник</h1>
+                    <p>Описание описание описание описание описание описание </p>
+                    <p>
+                        <a class="btn btn-lg btn-secondary" href="@Url.Action("bur", "uavs")" role="button">Подробнее</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Назад</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Далее</span>
+    </a>
+</div>
+
+<!-- Средний бар -->
+
+<section class="jumbotron" style="margin-top: -5%; height: auto;">
+ 
+       <table class="table table-responsive" >
+        <tr>
+            <td style="width: 40%; vertical-align: central">
+                <img src="~/Content/Pictures/rescue-traning-20120725-12.jpg" style="width: 100%;" alt="text" class ="img-responsive center-block"/>
+            </td>
+           
+             <td style="width: 60%; vertical-align: central">
+              
+                    <h2 class="jumbotron-heading" align="center">РУП "БАК и технологии"</h2>
+             
+                 <p align="center" class="text-muted" style="font-size: 1.3rem; font-weight: 300; padding-left: 10%">
+                     Основными направлениям деятельности РУП является разработка,
+                     производство и ремонт беспилотных летательных аппаратов, компонентов бортового и наземного оборудования БАК, а также оказание сопутствующих услуг.
+                     Наша продукция вкючает:</p>
+                 <p align="left" class="text-muted" style="font-size: 1.3rem; font-weight: 300; padding-left: 10%">
+                     <br /> 1. Беспилотные летательные аппараты легкого и тактического классов.
+                     <br /> 2. Средства автоматического управления БЛА.
+                     <br />  3. Оптические системы наблюдения и фотосъемки в оптическом и инфракрасном диапазонах.
+                     <br />  4. Производство систем связи с БЛА дальностью применения от 25 до 300 км.
+                     <br />   5. Наземные средства управления, регистрации и обработки полетной информации.
+                     <br />
+                 </p>
+                 <p align="center"><a href="@Url.Action("Index", "uavs")" class="btn btn-secondary">Узнать больше &raquo;</a></p> 
+                 
+            </td>
+        </tr>
+    </table>
+  
+    
+
+</section>
+
+<hr class="featurette-divider">
+
+<section class="jumbotron text-xs-center">
+
+    <div class="container">
+        <img class="img-thumbnail img-responsive center-block" src="~/Content/Pictures/busel!.jpg" alt="Generic placeholder image" style="width: 40%; float: left">
+        <h1 class="jumbotron-heading">Беспилотный авиационный комплекс Бусел М</h1>
+        <p class="lead text-muted">Радиус применения до 20 км</p>
+        <p class="lead text-muted">Минимальная скорость - 19 м/c</p>
+        <p class="lead text-muted">Взлет "с руки"</p>
+        <p class="lead text-muted">Время в полёте - до 2 ч.</p>
+        <p>
+            <a href="@Url.Action("buselm","uavs")" class="btn btn-secondary">Подробнее</a>
+        </p>
+    </div>
+
+</section>
+
+<hr class="featurette-divider">
+
+<section class="jumbotron text-xs-center">
+
+    <div class="container">
+        <img class="img-thumbnail img-responsive center-block" src="~/Content/Pictures/m50.jpg" alt="Generic placeholder image" style="width: 40%; float: left">
+        <h1 class="jumbotron-heading">Беспилотный авиационный комплекс Бусел М50</h1>
+        <p class="lead text-muted">Радиус применения до 50 км</p>
+        <p class="lead text-muted">Минимальная скорость - 17 м/c</p>
+        <p class="lead text-muted">Взлет "с руки"</p>
+        <p class="lead text-muted">Время в полёте - до 3 ч</p>
+        <p>
+            <a href="@Url.Action("buslem50", "uavs")" class="btn btn-secondary">Подробнее</a>
+        </p>
+    </div>
+
+</section>
+
+<hr class="featurette-divider">
+
+<section class="jumbotron text-xs-center">
+
+    <div class="container">
+        <img class="img-thumbnail img-responsive center-block" src="~/Content/Pictures/burevestn.jpg" alt="Generic placeholder image" style="width: 40%; float: left">
+        <h1 class="jumbotron-heading">Беспилотный авиационный комплекс "Буревестник"</h1>
+        <p class="lead text-muted">Радиус применения до 300 км</p>
+        <p class="lead text-muted">Взлетная масса - 250 кг</p>
+        <p class="lead text-muted">Время в полёте - до 8 ч</p>
+        <p>
+            <a href="@Url.Action("bur", "uavs")" class="btn btn-secondary">Подробнее</a>
+        </p>
+    </div>
+
+</section>
+
+<hr class="featurette-divider">
+
+<section class="jumbotron text-xs-center">
+
+    <div class="container">
+        <img class="img-thumbnail img-responsive center-block" src="~/Content/Pictures/bakem.jpg" alt="Generic placeholder image" style="width: 40%; float: left">
+        <h1 class="jumbotron-heading">Беспилотный авиационный комплекс  экологического мониторинга</h1>
+        <p class="lead text-muted">Радиус применения до 50 км</p>
+        <p class="lead text-muted">Взлетная масса - 25 кг</p>
+        <p class="lead text-muted">Время в полёте - до 5 ч</p>
+        <p>
+            <a href="@Url.Action("bur", "uavs")" class="btn btn-secondary">Подробнее</a>
+        </p>
+    </div>
+
+</section>
+
+<hr class="featurette-divider">
+
+<!-- Нижний бар -->
+
+
+<div class="container">
+    <button style="cursor: default" type="button" class="btn btn-lg btn-block card-header" disabled=""><h3 style="color: black"> Дополнительно </h3></button><br />
+    <div class="row">
+
+        <div class="card">
+
+            <a href="@Url.Action("index", "gcu")"><h4 class="card-header btn btn-secondary" style="width: 100%;" align="center">Пункты управления</h4></a>
+            <img class="card-img-top img-responsive center-block" src="~/Content/Pictures/gcu_mobile.jpg" alt="Card image cap" style="width: 100%; height: 100%">
+
+
+
+
+        </div>
+
+        <div class="card">
+            <a href="@Url.Action("index", "payloads")"><h4 class="card-header btn btn-secondary" style="width: 100%;" align="center">Оптические системы</h4></a>
+            <p align="center"><img class="card-img-top img-responsive center-block" src="~/Content/Pictures/ir_2.jpg" alt="Card image cap" style="width: 80%; height: 100%">
+            </p>
+
+
+
+
+        </div>
+
+        <div class="card" style="">
+
+            <a href="@Url.Action("index", "connection")"><h4 class="card-header btn btn-secondary" style="width: 100%;" align="center">Системы связи</h4></a>
+            <p align="center"><img class="card-img-top img-responsive center-block" src="~/Content/Pictures/opu.jpg" alt="Card image cap" style="width: 100%; height: 100%">
+            </p>
+
+
+        </div>
+
+
+
+    </div>
+    <p align="center" class="pull-xs-none">
+        <a href="#">&uArr; Вверх &uArr;</a>
+    </p>
+</div>
+                

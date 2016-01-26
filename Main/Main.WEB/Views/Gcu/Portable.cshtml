@@ -1,0 +1,52 @@
+﻿@model Main.BLL.DTO.GcuTypeDTO
+
+@{
+    ViewBag.Title = "Portable";
+}
+
+<button style="cursor: default" type="button" class="btn btn-lg btn-block card-header" disabled=""><h3 style="color: black">Переносной наземный пункт управления</h3></button><br />
+
+<img src="~/Content/Pictures/gcu.jpg" alt="buse" style="width: 50%; float: left" />
+<img src="~/Content/Pictures/gcu.jpg" alt="busel" style="width: 50%" />
+
+<div style="padding-top: 5%">
+
+    <div class="card">
+        <h3 align="center" class="card-header">Состав НПУ</h3>
+        <p>
+            <ol>
+                <li>Пластиковый контейнер </li>
+                <li>АРМ оператора БЛА с консолью управления</li>
+                <li>АРМ оператора ЦН с консолью управления</li>
+            </ol>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3 align="center" class="card-header">Состав НПУ</h3>
+        <p>
+            <ol>
+                <li>Пластиковый контейнер </li>
+                <li>АРМ оператора БЛА с консолью управления</li>
+                <li>АРМ оператора ЦН с консолью управления</li>
+            </ol>
+        </p>
+    </div>
+
+    <div class="card">
+        <h3 align="center" class="card-header">Состав НПУ</h3>
+        <p>
+            <ol>
+                <li>Пластиковый контейнер </li>
+                <li>АРМ оператора БЛА с консолью управления</li>
+                <li>АРМ оператора ЦН с консолью управления</li>
+            </ol>
+        </p>
+    </div>
+
+</div>
+
+<button style="cursor: default" type="button" class="btn btn-lg btn-block card-header" disabled=""><h3 style="color: black">Технические характеристики НПУ</h3></button><br />
+
+@Html.Partial("PartialTables/_TableGcu", Model)
+

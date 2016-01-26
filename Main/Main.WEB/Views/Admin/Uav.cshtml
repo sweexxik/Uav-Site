@@ -1,0 +1,22 @@
+﻿@model Main.BLL.DTO.UavDTO
+
+@{
+    ViewBag.Title = "Uav";
+}
+
+<h2>@Model.Type.Name</h2>
+
+@if (TempData["success"] != null)
+{
+    <div class="alert alert-success">@TempData["success"]</div>
+}
+
+@if (TempData["error"] != null)
+{
+    <div class="alert alert-danger">@TempData["error"]</div>
+}
+
+@Html.ActionLink("<< Back", "Index", "Admin")
+@Html.RouteLink("Edit", "admin", new { controller = "admin", action = "edit", type = "uavs", _id = @Model.Id })
+@Html.RouteLink("Delete", "admin", new {controller = "admin", action = "delete", type = "uavs", _id = @Model.Id})
+@Html.Partial("PartialTables/_TableUav", Model)

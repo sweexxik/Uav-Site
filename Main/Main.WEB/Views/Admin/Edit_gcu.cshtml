@@ -1,0 +1,69 @@
+﻿@model Main.BLL.Models.GcuEditModel
+
+@{
+    ViewBag.Title = "Gcu";
+}
+
+@using (Html.BeginForm("EditGcu", "Admin"))
+{
+
+    @Html.AntiForgeryToken()
+
+    <h4>@Model.GcuType.Name</h4>
+    <hr />
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.GcuType.Id)
+    <table class="table table-hover table-striped">
+        <thead class="thead-default">
+            <tr>
+                <th>#</th>
+                <th>Параметр</th>
+                <th>Значение</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int counter = 1;
+
+                foreach (var item in ViewData.ModelMetadata.Properties.First(x => x.PropertyName == "GcuType").Properties)
+                {
+
+                    if (item.PropertyName != "SupportedUavs" && item.PropertyName != "Id")
+                    {
+                        <tr>
+                            <th scope="row">@counter</th>
+                            <td>@Html.Label(item.PropertyName, new { @class = "control-label col-md-7" })</td>
+
+                            <td>
+                                @Html.Editor("GcuType." + @item.PropertyName, new { htmlAttributes = new { @class = "form-control", data_val = "true", data_val_required = "Поле не должно быть пустым" } })
+                                @Html.ValidationMessage("GcuType." + item.PropertyName, "", new { @class = "text-danger" })
+                            </td>
+
+                        </tr>
+                        counter++;
+                    }
+                }
+
+            }
+        <tr>
+            <th scope="row">5</th>
+            <td>Выберите поддерживаемые типы БЛА</td>
+            <td>
+                @foreach (var item in Model.UavTypes)
+                {
+                    var i = (Model.GcuType.SupportedUavs.Any(x => x.Id == item.Id)) ? "Checked=\"checked\"" : "";
+                    <input type="checkbox" name="UavType" value="@item.Id" @i />@item.Name
+                    <br />
+                }
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+}
+<div>@Html.ActionLink("Back to List", "Index")</div>

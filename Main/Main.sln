@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UAV.Domain", "UAV.Domain\UAV.Domain.csproj", "{8DD4A405-E595-4FBF-9618-873C79536C66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main.WEB", "Main.WEB\Main.WEB.csproj", "{2D8B8FF9-6B5D-481C-AF73-7DC67B45F63F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UAV.BLL", "Main.BLL\UAV.BLL.csproj", "{6AF3C271-5B45-4F8A-AD6B-E3A62E441744}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DD4A405-E595-4FBF-9618-873C79536C66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD4A405-E595-4FBF-9618-873C79536C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD4A405-E595-4FBF-9618-873C79536C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD4A405-E595-4FBF-9618-873C79536C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D8B8FF9-6B5D-481C-AF73-7DC67B45F63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D8B8FF9-6B5D-481C-AF73-7DC67B45F63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D8B8FF9-6B5D-481C-AF73-7DC67B45F63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D8B8FF9-6B5D-481C-AF73-7DC67B45F63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AF3C271-5B45-4F8A-AD6B-E3A62E441744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF3C271-5B45-4F8A-AD6B-E3A62E441744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF3C271-5B45-4F8A-AD6B-E3A62E441744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF3C271-5B45-4F8A-AD6B-E3A62E441744}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

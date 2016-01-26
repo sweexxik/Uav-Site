@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model Main.WEB.Models.AdminIndexViewModel
+
+@if (TempData["success"] != null)
+{
+    <div class="alert alert-success">@TempData["success"]</div>
+}
+@if (TempData["error"] != null)
+{
+    <div class="alert alert-danger">@TempData["error"]</div>
+}
+<table class="table table-hover table-striped" style="width: 22%; float: left; margin-right: 1%">
+    <thead class="thead-default">
+        <tr>
+            <th>
+                Uavs
+                <span style="font-size: x-small">
+                    @Html.RouteLink("Create New", "admin", new { controller = "admin", action = "create", type = "uav" })
+                </span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Uavs)
+        {
+            <tr>
+                <td>
+                    @Html.RouteLink(item.Type.Name, "admin", new { controller = "admin", action = "show", type = "uavs", _id = item.Id })
+                    <span style="font-size: x-small">
+                        @Html.RouteLink("Edit", "admin", new { controller = "admin", action = "edit", type = "uavs", _id = @item.Id })
+                        @Html.RouteLink("Delete", "admin", new { controller = "admin", action = "delete", type = "uavs", _id = @item.Id })
+
+
+                    </span>
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<table class="table table-hover table-striped" style="width: 22%; float: left; margin-right: 1%">
+    <thead class="thead-default">
+        <tr>
+            <th>
+                Payloads
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Payloads)
+        {
+            <tr>
+                <td>
+                    @Html.RouteLink(item.Type, "admin", new { controller = "admin", action = "show", type = "plds", _id = @item.Id })
+                    <span style="font-size: x-small">
+                        @Html.RouteLink("Edit", "admin", new { controller = "admin", action = "edit", type = "plds", _id = @item.Id })
+
+                    </span>
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<table class="table table-hover table-striped" style="width: 22%; float: left;margin-right: 2%">
+    <thead class="thead-default">
+    <tr>
+        <th>
+            GcuTypes
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.GcuTypes)
+    {
+        <tr>
+            <td>
+                @Html.RouteLink(item.Name, "admin", new {controller = "admin", action = "show", type = "gcus", _id = item.Id})
+                <span style="font-size: x-small">
+                        @Html.RouteLink("Edit", "admin", new {controller = "admin", action = "edit", type = "gcus", _id = @item.Id})
+                    </span>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+<table class="table table-hover table-striped" style="width: 22%;">
+    <thead class="thead-default">
+        <tr>
+            <th>
+                UavTypes
+                <span style="font-size: x-small">
+                    @Html.RouteLink("Create New", "admin", new { controller = "admin", action = "create", type = "uavtypes" })
+                </span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.UavTypes)
+        {
+            <tr>
+                <td>
+                    @Html.RouteLink(item.Name, "admin", new { controller = "admin", action = "show", type = "uavtypes", _id = item.Id })
+                    <span style="font-size: x-small">
+                        @Html.RouteLink("Edit", "admin", new { controller = "admin", action = "edit", type = "uavtypes", _id = @item.Id })
+                        @Html.RouteLink("Delete", "admin", new { controller = "admin", action = "delete", type = "uavtypes", _id = @item.Id })
+                    </span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

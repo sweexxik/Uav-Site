@@ -1,0 +1,90 @@
+﻿@model Main.BLL.DTO.GcuTypeDTO
+
+<table class="table table-hover table-striped">
+    <thead class="thead-default">
+        <tr>
+            <th>#</th>
+            <th>Параметр</th>
+            <th>Значение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>@Html.LabelFor(x=>x.Name)</td>
+            <td>
+                @{
+                    string value = string.Empty;
+                    switch (Model.Name)
+                    {
+                        case ("mobile"):
+                            value = "Мобильный";
+                            break;
+                        case ("portable"):
+                            value = "Переносной";
+                            break;
+                        case ("stationary"):
+                            value = "Стационарный";
+                            break;
+                       
+                        default:
+                            value = "Не установлено";
+                            break;
+                    }
+                }
+                @value
+            </td>
+
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Поддерживаемые типы БЛА</td>
+            <td>
+                <ul>
+                    @foreach (var item in Model.SupportedUavs)
+                    {
+
+
+                        switch (item.Id)
+                        {
+                            case (1):
+                                value = "Бусел М";
+                                break;
+                            case (2):
+                                value = "Бусел М50";
+                                break;
+                            case (3):
+                                value = "Буревестник";
+                                break;
+                            case (4):
+                                value = "БАК ЭМ";
+                                break;
+
+                            default:
+                                value = "Не установлено";
+                                break;
+                        }
+                        <li> <h5><span class="label label-info">@value</span></h5></li>
+                    }
+                </ul>
+            </td>
+        </tr>
+        @{
+            int counter = 3;
+            foreach (var item in ViewData.ModelMetadata.Properties)
+            {
+                if (item.PropertyName != "Name" && item.PropertyName != "SupportedUavs" && item.PropertyName != "Id")
+                {
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@Html.Label(item.PropertyName)</td>
+                        <td>@Html.Display(item.PropertyName) </td>
+                    </tr>
+                    counter++;
+                }
+            }
+        }
+    </tbody>
+</table>
+
+

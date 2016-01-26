@@ -1,0 +1,94 @@
+﻿@model Main.BLL.Models.UavEditModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create new UAV</h2>
+@using (Html.BeginForm("EditUav", "admin"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Создание нового БЛА</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Uav.Id)
+
+        <table class="table table-hover table-striped">
+            <thead class="thead-default">
+                <tr>
+                    <th>#</th>
+                    <th>Параметр</th>
+                    <th>Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int counter = 1;
+                    foreach (var item in ViewData.ModelMetadata.Properties.First(x => x.PropertyName == "Uav").Properties)
+                    {
+
+                        if (item.PropertyName != "Id" && item.PropertyName != "Payloads" && item.PropertyName != "GcuTypes" && item.PropertyName != "Type")
+                        {
+                            <tr>
+                                <th scope="row">@counter</th>
+                                <td>@Html.Label(item.PropertyName, new { @class = "control-label col-md-7" })</td>
+                                <td>@Html.Editor("Uav." + @item.PropertyName, new { htmlAttributes = new { @class = "form-control", data_val = "true", data_val_required = "Поле не должно быть пустым" } })</td>
+                                <td>@Html.ValidationMessage("Uav." + item.PropertyName, "", new { @class = "text-danger" })</td>
+                            </tr>
+                            counter++;
+                        }
+                    }
+                }
+                <tr>
+                    <th scope="row">12</th>
+                    <td>Выберите поддерживаемые ЦН</td>
+                    <td>
+                        @foreach (var item in Model.Payloads)
+                        {
+                            <input type="checkbox" name="Payloads" aria-label="Checkbox for following text input" value="@item.Id" />
+                            @item.Type<br />
+                        }
+
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">13</th>
+                    <td>Выберите поддерживаемые НПУ</td>
+                    <td>
+                        @foreach (var item in Model.GcuTypes)
+                        {
+                            <input type="checkbox" name="GcuType" aria-label="Checkbox for following text input" value="@item.Id" />
+                            @item.Name<br />
+                        }
+
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">14</th>
+                    <td>Выберите тип БЛА</td>
+                    <td>
+                        @foreach (var item in Model.UavTypes)
+                        {
+                            <input type="radio" name="UavType" value="@item.Id" />
+                            @item.Name<br />
+                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.ActionLink("Back to List", "Index")
+                <p align="center">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </p>
+                <br />
+            </div>
+        </div>
+
+    </div>
+}
